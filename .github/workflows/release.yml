@@ -1,0 +1,29 @@
+# Publishes a GitHub Release when a version tag (v1.2.3) is pushed.
+# The tagged commit carries SpaceEater.exe, SpaceEater.exe.sha256 and release-notes.md;
+# the main branch never contains the executable.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify checksum
+        run: sha256sum -c SpaceEater.exe.sha256
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$TAG" SpaceEater.exe SpaceEater.exe.sha256 \
+            --title "SpaceEater ${TAG#v}" \
+            --notes-file release-notes.md \
+            --verify-tag

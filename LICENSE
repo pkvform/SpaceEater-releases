@@ -1,0 +1,66 @@
+SpaceEater
+Copyright (c) 2026 Polianskii Konstantin. All rights reserved.
+
+===============================================================================
+RU: УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
+===============================================================================
+
+1. Исходный код программы SpaceEater является собственностью правообладателя.
+   Копирование, изменение и распространение исходного кода без письменного
+   разрешения правообладателя не допускаются.
+
+2. Готовую программу (файл SpaceEater.exe), опубликованную правообладателем,
+   разрешается бесплатно использовать для личных и рабочих задач.
+
+3. ОТКАЗ ОТ ГАРАНТИЙ. Программа предоставляется «как есть» (as is), без
+   каких-либо явных или подразумеваемых гарантий, включая, но не ограничиваясь
+   гарантиями товарной пригодности, пригодности для определённой цели,
+   безошибочной и бесперебойной работы, сохранности данных.
+
+4. ОГРАНИЧЕНИЕ ОТВЕТСТВЕННОСТИ. Ни при каких обстоятельствах автор и
+   правообладатель не несут ответственности за любой прямой, косвенный,
+   случайный или последующий ущерб, включая потерю, повреждение или раскрытие
+   данных, упущенную выгоду и перерывы в работе, возникший в результате
+   использования программы, невозможности её использования или её
+   неправильной работы, даже если о возможности такого ущерба было известно.
+
+5. Пользователь самостоятельно принимает решения об удалении, перемещении,
+   переименовании и отправке файлов с помощью программы и отвечает за наличие
+   резервных копий своих данных.
+
+6. Используя программу, вы подтверждаете согласие с этими условиями. Если вы
+   не согласны с ними, не используйте программу.
+
+===============================================================================
+EN: TERMS OF USE
+===============================================================================
+
+1. The source code of SpaceEater is the property of the copyright holder.
+   Copying, modifying or distributing the source code without the copyright
+   holder's written permission is not permitted.
+
+2. The compiled program (SpaceEater.exe) published by the copyright holder may
+   be used free of charge for personal and work purposes.
+
+3. NO WARRANTY. THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ERROR-FREE OR
+   UNINTERRUPTED OPERATION, AND PRESERVATION OF DATA.
+
+4. LIMITATION OF LIABILITY. IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE
+   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES,
+   INCLUDING LOSS, CORRUPTION OR DISCLOSURE OF DATA, LOSS OF PROFITS OR
+   BUSINESS INTERRUPTION, ARISING OUT OF THE USE OF, INABILITY TO USE, OR
+   INCORRECT OPERATION OF THE PROGRAM, EVEN IF ADVISED OF THE POSSIBILITY OF
+   SUCH DAMAGES.
+
+5. The user alone decides which files to delete, move, rename or upload with
+   the program and is responsible for keeping backups of their data.
+
+6. By using the program you accept these terms. If you do not accept them, do
+   not use the program.
+
+-------------------------------------------------------------------------------
+Third-party components (each under its own license): Avalonia UI (MIT),
+.NET runtime (MIT), MetadataExtractor (Apache-2.0), PDFium (BSD-3-Clause /
+Apache-2.0), Inter font (SIL Open Font License 1.1).
