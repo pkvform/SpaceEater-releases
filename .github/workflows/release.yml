@@ -1,11 +1,12 @@
-# Publishes a GitHub Release when a version tag (v1.2.3) is pushed.
-# The tagged commit carries SpaceEater.exe, SpaceEater.exe.sha256 and release-notes.md;
-# the main branch never contains the executable.
+# Publishes a GitHub Release when a branch named release/v1.2.3 is pushed.
+# That branch's commit carries SpaceEater.exe, SpaceEater.exe.sha256 and release-notes.md;
+# the main branch never contains the executable. After the release (and its tag) is created,
+# the branch is deleted: the tag keeps the commit.
 name: Release
 
 on:
   push:
-    tags: ["v*"]
+    branches: ["release/v*"]
 
 permissions:
   contents: write
@@ -21,9 +22,12 @@ jobs:
       - name: Create release
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.ref_name }}
+          BRANCH: ${{ github.ref_name }}
         run: |
+          TAG="${BRANCH#release/}"
           gh release create "$TAG" SpaceEater.exe SpaceEater.exe.sha256 \
+            --target "$GITHUB_SHA" \
             --title "SpaceEater ${TAG#v}" \
-            --notes-file release-notes.md \
-            --verify-tag
+            --notes-file release-notes.md
+      - name: Remove release branch
+        run: git push origin --delete "${{ github.ref_name }}"
